@@ -20,7 +20,7 @@ const SurveyScreen = () => {
   useEffect(() => {
     const fetchSurveyQuestions = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/getQuestions");
+        const response = await axios.get("https://survey-app-server-side.vercel.app/getQuestions");
         console.log(response.data);
 
         if (response.data && Array.isArray(response.data)) {
@@ -63,7 +63,7 @@ const SurveyScreen = () => {
         const sessionId = uuidv4();
 
         // Send a request to start a new session
-        const response = await axios.post("http://localhost:5000/startSession", {
+        const response = await axios.post("https://survey-app-server-side.vercel.app/startSession", {
           sessionId: sessionId,
         });
 
@@ -121,7 +121,7 @@ const SurveyScreen = () => {
               );
   
               // Save answers in the database
-              await axios.post('http://localhost:5000/surveyAnswers', {
+              await axios.post('https://survey-app-server-side.vercel.app/surveyAnswers', {
                 answers: formattedAnswers,
                 surveyCompleted: 'COMPLETED', // Update to string value
               });
@@ -171,7 +171,7 @@ const SurveyScreen = () => {
   const addQuestion = async () => {
     if (newQuestion) {
       try {
-        const response = await axios.post("http://localhost:5000/addQuestion", {
+        const response = await axios.post("https://survey-app-server-side.vercel.app/addQuestion", {
           question: newQuestion,
         });
 

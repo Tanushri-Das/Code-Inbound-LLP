@@ -17,7 +17,7 @@
 //   useEffect(() => {
 //     const fetchSurveyQuestions = async () => {
 //       try {
-//         const response = await axios.get("http://localhost:5000/addQuestion");
+//         const response = await axios.get("https://survey-app-server-side.vercel.app/addQuestion");
 //         console.log(response.data);
 
 //         if (response.data && Array.isArray(response.data)) {
@@ -78,7 +78,7 @@
 //           },
 //           onClick: async () => {
 //             try {
-//               await axios.post('http://localhost:5000/surveyAnswers', {
+//               await axios.post('https://survey-app-server-side.vercel.app/surveyAnswers', {
 //                 ...answers,
 //                 surveyCompleted: 'COMPLETED',
 //               });
@@ -125,7 +125,7 @@
 //   const addQuestion = async () => {
 //     if (newQuestion) {
 //       try {
-//         const response = await axios.post("http://localhost:5000/addQuestion", {
+//         const response = await axios.post("https://survey-app-server-side.vercel.app/addQuestion", {
 //           question: newQuestion,
 //         });
   
@@ -337,7 +337,7 @@ const handleFinish = async () => {
               );
 
               // Save answers in the database
-              await axios.post("http://localhost:5000/surveyAnswers", {
+              await axios.post("https://survey-app-server-side.vercel.app/surveyAnswers", {
                 answers: formattedAnswers,
                 surveyCompleted: completed, // Update to boolean value
               });
