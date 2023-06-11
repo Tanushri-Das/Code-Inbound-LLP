@@ -205,17 +205,6 @@ const SurveyScreen = () => {
     }
   };
 
-  // useEffect(() => {
-  //   const savedAnswers = localStorage.getItem("surveyAnswers");
-  //   if (savedAnswers) {
-  //     setAnswers(JSON.parse(savedAnswers));
-  //   }
-  // }, []);
-
-  // useEffect(() => {
-  //   localStorage.setItem("surveyAnswers", JSON.stringify(answers));
-  // }, [answers]);
-
   useEffect(() => {
     const isSurveyCompleted = localStorage.getItem("surveyCompleted");
     if (isSurveyCompleted === JSON.stringify("COMPLETED")) {
