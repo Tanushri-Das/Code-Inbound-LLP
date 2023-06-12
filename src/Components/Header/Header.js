@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { FaFacebook, FaLinkedin, FaYoutube } from 'react-icons/fa';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,18 +25,7 @@ const Navbar = () => {
                 >
                   Home
                 </a>
-                <a
-                  href="/about"
-                  className="text-white px-3 py-2 rounded-md text-lg font-medium"
-                >
-                  About
-                </a>
-                <a
-                  href="/contact"
-                  className="text-white px-3 py-2 rounded-md text-lg font-medium"
-                >
-                  Contact
-                </a>
+                
               </div>
             </div>
             <div className="-mr-2 flex md:hidden">
@@ -98,18 +86,7 @@ const Navbar = () => {
             >
               Home
             </a>
-            <a
-              href="/about"
-              className="text-white block px-3 py-2 rounded-md text-base font-medium"
-            >
-              About
-            </a>
-            <a
-              href="/contact"
-              className="text-white block px-3 py-2 rounded-md text-base font-medium"
-            >
-              Contact
-            </a>
+            
           </div>
         </div>
       )}

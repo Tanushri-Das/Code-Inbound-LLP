@@ -223,13 +223,10 @@ const SurveyScreen = () => {
 
   useEffect(() => {
     if (surveyCompleted) {
-      const redirectTimeout = setTimeout(() => {
-        navigate("/");
-      }, 5000);
-
-      return () => clearTimeout(redirectTimeout);
+      navigate("/");
     }
   }, [surveyCompleted, navigate]);
+  
 
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-blue-300">
